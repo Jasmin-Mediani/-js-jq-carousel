@@ -62,7 +62,7 @@ $(document).ready(function () {
 
 
 
-
+    setInterval(nextImage, 3000); // per slider automatico che cambia ogni 3 secondi 
 
 
 
