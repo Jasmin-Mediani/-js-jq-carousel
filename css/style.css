@@ -52,7 +52,7 @@
 
 .slider-nav {
   position: absolute;
-  bottom: -30px;
+  bottom: -40px;
   left: 50%;
   justify-content: center;
   transform: translateX(-50%);
@@ -65,4 +65,17 @@
   color: red;
 }
 
+.bottoni {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+}
 
+button {
+  width: 80px;
+  height: 30px;
+}

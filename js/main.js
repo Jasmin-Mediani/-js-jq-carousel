@@ -6,7 +6,6 @@ $(document).ready(function () {
 
     function nextImage() {
         if ($(".images img.active").hasClass("last")) {
-
             $(".images img.active").removeClass("active");
             $(".images img.first").addClass("active");
 
@@ -18,9 +17,7 @@ $(document).ready(function () {
             var imgAttiva = $(".images img.active");
             var prossimaImg = $(".images img.active").next();
 
-
             //questi sono i pallini
-
             var pallinoAttivo = $(".slider-nav i.active");
             var prossimoPallino = $(".slider-nav i.active").next();
         }
@@ -43,7 +40,6 @@ $(document).ready(function () {
             $(".images img.active").removeClass("active");
             $(".images img.last").addClass("active");
 
-
             //questi sono i pallini
             $(".slider-nav i.active").removeClass("active"); //forse devo invertire remove e add?
             $(".slider-nav i.last").addClass("active");
@@ -51,21 +47,26 @@ $(document).ready(function () {
         } else {
             var imgAttiva = $(".images img.active");
             var precedenteImg = $(".images img.active").prev();
+            //questi sono i pallini 
+            var pallinoAttivo = $(".slider-nav i.active");
+            var precedentePallino = $(".slider-nav i.active").prev();
         }
-
-        //questi sono i pallini 
-        var pallinoAttivo = $(".slider-nav i.active");
-        var precedentePallino = $(".slider-nav i.active").prev();
-
 
 
         imgAttiva.removeClass("active");
         precedenteImg.addClass("active");
 
-
         pallinoAttivo.removeClass("active");
         precedentePallino.addClass("active");
     }
+
+
+
+
+
+
+
+
 
 
 });
