@@ -41,7 +41,7 @@ $(document).ready(function () {
             $(".images img.last").addClass("active");
 
             //questi sono i pallini
-            $(".slider-nav i.active").removeClass("active"); //forse devo invertire remove e add?
+            $(".slider-nav i.active").removeClass("active");
             $(".slider-nav i.last").addClass("active");
 
         } else {
@@ -62,7 +62,20 @@ $(document).ready(function () {
 
 
 
-    setInterval(nextImage, 3000); // per slider automatico che cambia ogni 3 secondi 
+    // Slider automatico che cambia ogni 3 secondi. Devo assegnare una variabile ("loop") a "setInterval(nextImage, 3000)" così da poterla richiamare come parametro quando faccio clearInterval:
+
+    var loop;
+
+    $(".play-button").click(function () {
+        loop = setInterval(nextImage, 3000);
+    });
+
+
+    $(".pause-button").click(function () {
+        clearInterval(loop);
+    });
+
+
 
 
 
