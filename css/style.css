@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow {
+  /* provvisorio per dare una dimenzione iniziale allo spazio di lavoro:
+
+  width: 500px;
+  height: 300px;
+  background-color: red;*/
+  display: flex;
+  align-items: center;
+  position: relative; /* per absolute di .slider-nav*/
+}
+
+.prev,
+.next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.images {
+  width: 500px;
+  height: calc(500px / 16 * 9); /*16:9... sedici noni*/
+}
+
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* senza questo, le immagini si schiacciano un po'. Con "object-fit: cover" mantengono le proporzioni... ma viene tagliata la foto automaticamente */
+  display: none; /* fammi sparire le immagini...*/
+}
+
+.images img.active {
+  display: block; /* e quella attiva mostramela*/
+}
+
+/*slider navigation*/
+
+.slider-nav {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  justify-content: center;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  border-radius: 5px;
+  justify-content: space-between;
+}
+
+.slider-nav i.active {
+  color: red;
+}
+
+
